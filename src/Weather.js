@@ -16,7 +16,7 @@ const [ city, setCity] = useState(props.defaultCity);
             Humidity:response.data.main.humidity,
             date: new Date(response.data.dt * 1000),
             description: response.data.weather[0].description,
-            iconUrl: 'https://openweathermap.org/img/wn/${response.data.weather[0].icon}2x.png',
+            iconUrl: response.data.weather[0].icon,
             wind: response.data.main.wind.speed,
             city: response.data.name
 
