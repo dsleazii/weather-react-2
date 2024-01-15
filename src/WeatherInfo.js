@@ -1,5 +1,5 @@
 import React from "react";
-import FormatedDate from "./FormatedDate";
+import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
@@ -9,7 +9,7 @@ export default function WeatherInfo(props) {
       <h1>{props.data.city}</h1>
       <ul>
         <li>
-          <FormatedDate date={props.data.date} />
+          <FormattedDate date={props.data.date} />
         </li>
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
@@ -18,8 +18,7 @@ export default function WeatherInfo(props) {
           <div className="clearfix">
             <div className="float-left">
               <WeatherIcon
-                code={props.data.icon}
-                alt={props.data.description}
+                code={props.data.icon} size={52}
               />
             </div>
             <div className="float-left">
